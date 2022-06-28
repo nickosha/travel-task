@@ -21,13 +21,6 @@ li {
   margin: 0;
 }
 
-/* body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-} */
-
 ul[class],
 ol[class] {
   list-style: none;
@@ -42,19 +35,14 @@ button {
     cursor: pointer;
 }
 
-/* img {
-  max-width: 100%;
-  display: block;
-} */
-
 html {
     font-size: 10px;
     scroll-behavior: smooth;
 }
 
 body {
-    margin: 0 auto;
     max-width: 1440px;
+    margin: 0 auto;
     font-size: 2rem;
     font-family: 'Aleo', serif;
     transition: all 0.3s ease;
@@ -81,13 +69,8 @@ h2 {
 }
 
 .header {
-    height: 765px;
-    background: url("../assets/header-bg.jpg") no-repeat center;
-}
-
-.header-wrapper {
-    background: rgba(242, 120, 92, 0.7);
-    box-shadow: 0px 4px 4px rgba(13, 96, 111, 0.5);
+    background: linear-gradient(rgba(242, 120, 92, 0.7), rgba(242, 120, 92, 0.7)),url("../assets/header-bg.jpg") no-repeat center;
+    background-position: center top;
 }
 
 .header-container {
@@ -185,8 +168,9 @@ h2 {
 }
 
 .main {
-    margin-top: -675px;
-    overflow: hidden;
+    background: url("../assets/header-bg.jpg") no-repeat center;
+    background-position: center -90px;
+    box-shadow: inset 0 8px 4px -4px rgb(13 96 111 / 50%);
 }
 
 .preview {
@@ -291,6 +275,7 @@ h2 {
 
 .destinations {
     text-align: center;
+    overflow: hidden;
 }
 
 .slider {
@@ -371,11 +356,11 @@ h2 {
 .stories {
     margin-top: 80px;
     text-align: center;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../assets/story-bg.jpg");
     background-repeat: no-repeat;
     background-size: 1445px 1331px;
-    background-position: 0 93px;
+    background-position: center 93px;
 }
 
 .articles {
@@ -424,14 +409,13 @@ h3 {
 }
 
 .stories__button {
-    margin-top: 40px;
+    margin-top: 38px;
 }
 
 .footer {
     background-image: url("../assets/story-bg.jpg");
     background-repeat: no-repeat;
-    /* background-size: 1445px 1331px; */
-    background-position: left bottom;
+    background-position: center bottom;
     padding-top: 14px;
     padding-bottom: 14px;
 }
