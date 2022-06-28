@@ -38,6 +38,10 @@ button {
     border: none;
 }
 
+button {
+    cursor: pointer;
+}
+
 /* img {
   max-width: 100%;
   display: block;
@@ -45,6 +49,7 @@ button {
 
 html {
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -52,6 +57,7 @@ body {
     max-width: 1440px;
     font-size: 2rem;
     font-family: 'Aleo', serif;
+    transition: all 0.3s ease;
 }
 
 h1 {
@@ -90,6 +96,12 @@ h2 {
     align-items: center;
 }
 
+.logo:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
 .header__navigation {
     margin-left: 158px;
 }
@@ -119,11 +131,37 @@ h2 {
     color: #FFFFFF;
 }
 
+.navigation-link {
+    position: relative;
+}
+
+.navigation-link:after {
+	content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: width 0.5s;
+}
+
+.navigation-link:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: width 0.5s;
+}
+
 .button {
     background: #0D606F;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
-    padding: 13.5px 32.5px;
+    padding: 15.5px 33.5px;
     font-family: 'Red Hat Text', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -131,12 +169,18 @@ h2 {
     color: #FFFFFF;
 }
 
+.button:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
 .header__button {
     margin-left: auto;
 }
 
 .header-button {
-    padding: 10px 30px;
+    padding: 12px 30px;
     font-size: 1.6rem;
 }
 
@@ -207,6 +251,7 @@ h2 {
 .layout-3-column {
     display: flex;
     justify-content: space-between;
+    padding: 0px 12px;
 }
 
 .step {
@@ -308,7 +353,11 @@ h2 {
 }
 
 .destinations__button {
-    margin-top: 42px;
+    margin-top: 40px;
+}
+
+.destinations-button {
+    padding-left: 31.5px;
 }
 
 .arrow-icon {
@@ -320,9 +369,9 @@ h2 {
 }
 
 .stories {
-    margin-top: 82px;
+    margin-top: 80px;
     text-align: center;
-    padding-bottom: 41px;
+    padding-bottom: 40px;
     background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../assets/story-bg.jpg");
     background-repeat: no-repeat;
     background-size: 1445px 1331px;
@@ -369,6 +418,100 @@ h3 {
     color: #0D606F;
 }
 
+.story__content>a {
+    font-weight: 700;
+    color: #0D606F;
+}
+
 .stories__button {
     margin-top: 40px;
+}
+
+.footer {
+    background-image: url("../assets/story-bg.jpg");
+    background-repeat: no-repeat;
+    /* background-size: 1445px 1331px; */
+    background-position: left bottom;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+}
+
+.social-links>* + * {
+    margin-left: 20px;
+}
+
+.rs-links {
+    display: flex;
+    align-items: center;
+}
+
+.rs-links>* + * {
+    margin-left: 20px;
+}
+
+.rsschool-link {
+    display: inline-block;
+    width: 55px;
+    height: 21px;
+    background-image: url("../assets/svg/rs_school_js.svg");
+    background-repeat: no-repeat;
+}
+
+.rsschool-link:hover,
+.github-link:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+.github-link {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../assets/svg/icon-github.svg");
+}
+
+.social-link {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+}
+
+.social-link:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+.instagram {
+    background-image: url("../assets/svg/icon_instagram.svg");
+}
+
+.youtube {
+    width: 35px;
+    background-image: url("../assets/svg/icons_youtube.svg");
+}
+
+.twitter {
+    background-image: url("../assets/svg/icon_twitter.svg");
+}
+
+.footer__text {
+    margin-left: 45px;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+    color: #FFFFFF;
 }
