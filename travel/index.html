@@ -11,13 +11,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,400;0,700;1,400;1,700&family=Red+Hat+Text:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header container">
         <div class="header-wrapper">
-            <div class="container header-container">
+            <div class="header-container">
                 <a href="#" class="logo">
-                    <object type="image/svg+xml" data="./assets/svg/logo.svg">
+                    <object class="logo-big" type="image/svg+xml" data="./assets/svg/logo.svg">
+                        Your browser does not support SVG
+                     </object>
+                    <object class="logo-mobile" type="image/svg+xml" data="./assets/svg/logo-mobile.svg">
                         Your browser does not support SVG
                      </object>
                 </a>
@@ -32,25 +36,28 @@
                 <div class="header__button">
                     <button class="button header-button">Login</button>
                 </div>
+                <a href="#" class="burger-menu-button">
+                    <object class="burger-menu" type="image/svg+xml" data="./assets/svg/burger-menu.svg">
+                        Your browser does not support SVG
+                     </object>
+                </a>
             </div>
         </div>
     </header>
-    <main class="main">
+    <main class="main container">
             <section class="preview" id="preview">
-                <div class="container">
                     <div class="preview__content">
-                        <h1>Explore the beauty of the World</h1>
-                        <p>Receive personalized recommendations for countries, hotels, activities and more</p>
+                        <div class="preview__text">
+                            <h1>Explore the beauty of the World</h1>
+                            <p>Receive personalized recommendations for countries, hotels, activities and more</p>
+                        </div>
                         <div class="preview__search">
                             <input type="text" placeholder="What would you like to do?">
                             <button type="submit" class="button button-preview">Start Planning</button>
                         </div>
                     </div>
-                </div>
-
             </section>
             <section class="steps" id="steps">
-                <div class="container">
                     <h2>3 STEPS TO THE PERFECT TRIP</h2>
                     <div class="layout-3-column">
                         <div class="step">
@@ -72,10 +79,8 @@
                             <p>We will give you recommendations</p>
                         </div>
                     </div>
-                </div>
             </section>
             <section class="destinations" id="destinations">
-                <div class="container">
                     <h2>POPULAR DESTINATIONS</h2>
                     <div class="slider">
                         <div class="slider__item1">
@@ -87,6 +92,10 @@
                         <div class="slider__item3">
                             <p class="slider__text">USA</p>
                         </div>
+                        <div class="mobile-arrow">
+                            <button class="prew"></button>
+                            <button class="next"></button>
+                        </div>
                     </div>
                     <div class="pagination">
                         <div class="pagination__item"></div>
@@ -96,15 +105,17 @@
                     <div class="destinations__button">
                         <button class="button destinations-button"><span class="arrow-icon"></span>Find More</button>
                     </div>
-                </div>
             </section>
             <section class="stories" id="stories">
-                <div class="container">
                     <h2>TRAVEL STORIES</h2>
                     <div class="articles">
                         <div class="story">
                             <div class="story__image">
-                                <img src="./assets/stories/story-1.jpg" alt="">
+                                <picture>
+                                    <source srcset="./assets/stories/story-mobile-1.jpg" media="(max-width: 390px)">
+                                    <source srcset="./assets/stories/story-1.jpg">
+                                    <img srcset="./assets/stories/story-1.jpg" alt="My default image">
+                                </picture>
                             </div>
                             <div class="story__content">
                                 <h3>10 Photos of Attractive Thailand</h3>
@@ -119,7 +130,11 @@
                         </div>
                         <div class="story">
                             <div class="story__image">
-                                <img src="./assets/stories/story-2.jpg" alt="">
+                                <picture>
+                                    <source srcset="./assets/stories/story-mobile-2.jpg" media="(max-width: 390px)">
+                                    <source srcset="./assets/stories/story-2.jpg">
+                                    <img srcset="./assets/stories/story-2.jpg" alt="My default image">
+                                </picture>
                             </div>
                             <div class="story__content">
                                 <h3>Canyonlands National Park, Utah</h3>
@@ -129,7 +144,11 @@
                         </div>
                         <div class="story">
                             <div class="story__image">
-                                <img src="./assets/stories/story-3.jpg" alt="">
+                                <picture>
+                                    <source srcset="./assets/stories/story-mobile-3.jpg" media="(max-width: 390px)">
+                                    <source srcset="./assets/stories/story-3.jpg">
+                                    <img srcset="./assets/stories/story-3.jpg" alt="My default image">
+                                </picture>
                             </div>
                             <div class="story__content">
                                 <h3>I left my heart in the Mountains!</h3>
@@ -139,7 +158,11 @@
                         </div>
                         <div class="story">
                             <div class="story__image">
-                                <img src="./assets/stories/story-4.jpg" alt="">
+                                <picture>
+                                    <source srcset="./assets/stories/story-mobile-4.jpg" media="(max-width: 390px)">
+                                    <source srcset="./assets/stories/story-4.jpg">
+                                    <img srcset="./assets/stories/story-4.jpg" alt="My default image">
+                                </picture>
                             </div>
                             <div class="story__content">
                                 <h3>The Longest journey in my life!</h3>
@@ -151,19 +174,18 @@
                     <div class="stories__button">
                         <button class="button"><span class="arrow-icon"></span>See More</button>
                     </div>
-                </div>
             </section>
     </main>
-    <footer class="footer">
-        <div class="container footer-container">
+    <footer class="footer container">
+        <div class="footer-container">
             <ul class="rs-links">
                 <li><a href="https://rs.school/js/" target="_blank"><span class="rsschool-link"></span></a></li>
                 <li><a href="https://github.com/nickosha" target="_blank"><span class="github-link"></span></a></li>
             </ul>
             <p class="footer__text">All Rights Reserved © Travel Portal</p>
             <ul class="social-links">
-                <li><a href="https://www.instagram.com/" target="_blank"><span class="social-link instagram"></span></a></li>
-                <li><a href="https://www.youtube.com/" target="_blank"><span class="social-link youtube"></span></a></li>
+                <li><a href="https://rs.school/js/" target="_blank"><span class="social-link instagram"></span></a></li>
+                <li><a href="https://github.com/nickosha" target="_blank"><span class="social-link youtube"></span></a></li>
                 <li><a href="https://twitter.com/" target="_blank"><span class="social-link twitter"></span></a></li>
             </ul>
         </div>
