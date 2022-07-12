@@ -95,6 +95,10 @@ h2 {
     align-items: center;
 }
 
+.logo-mobile {
+    display: none;
+}
+
 .logo:hover {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
@@ -183,6 +187,10 @@ h2 {
     font-size: 1.6rem;
 }
 
+.burger-menu-button {
+    display: none;
+}
+
 .main {
     background: url(../assets/header-bg.jpg) no-repeat center;
     background-position: center -90px;
@@ -196,7 +204,7 @@ h2 {
     max-width: 892px;
 }
 
-.preview__content>p {
+.preview__text>p {
     margin-top: 32px;
     font-style: italic;
     font-weight: 700;
@@ -333,6 +341,10 @@ h2 {
     font-size: 3.2rem;
     line-height: 4.2rem;
     color: #FFFFFF;
+}
+
+.mobile-arrow {
+    display: none;
 }
 
 .pagination {
