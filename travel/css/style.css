@@ -191,6 +191,79 @@ h2 {
     display: none;
 }
 
+.burger-menu-button__middle {
+    position: relative;
+    width: 26.25px;
+    height: 2.67px;
+    background-color: #fff;
+}
+
+.burger-menu-button__middle::before,
+.burger-menu-button__middle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 26.25px;
+    height: 2.67px;
+    background-color: #fff;
+}
+
+.burger-menu-button__middle::before {
+    top: -6.67px;
+}
+
+.burger-menu-button__middle::after {
+    top: 6.67px;
+}
+
+/* Mobile menu */
+
+.mobile-menu {
+    display: none;
+    max-width: 165px;
+    width: 165px;
+    max-height: 250px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-bottom: 30px;
+    padding-right: 15px;
+    background-color: #F2785C;
+    box-shadow: 0px 4px 3px rgba(13, 96, 111, 0.25);
+    border-radius: 10px;
+}
+
+.mobile-menu-button {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 6px;
+    background: url(../assets/svg/close.svg) no-repeat center;
+}
+
+.mobile-menu-list {
+    list-style: none;
+}
+
+.mobile-menu-list>li {
+    text-align: right;
+    font-family: 'Red Hat Text', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 2.1rem;
+}
+
+.mobile-menu-list> * + * {
+    margin-top: 10px;
+}
+
+.mobile-menu-link {
+    
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Main */
+
 .main {
     background: url(../assets/header-bg.jpg) no-repeat center;
     background-position: center -90px;
@@ -312,6 +385,7 @@ h2 {
     margin-left: -660px;
     margin-top: 46px;
     text-align: left;
+    transition: all 0.5s linear;
 }
 
 .slider__item1 {
@@ -362,6 +436,7 @@ h2 {
     height: 20px;
     border-radius: 50%;
     background: rgba(242, 120, 92, 0.5);
+    cursor: pointer;
 }
 
 .pagination__item.activ {
@@ -531,4 +606,88 @@ h3 {
     font-size: 1.6rem;
     line-height: 2.1rem;
     color: #FFFFFF;
+}
+
+.pop-up {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(20, 20, 20 , 0.3);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+}
+
+.pop-up__content {
+    max-width: 650px;
+    width: 650px;
+    max-height: 660px;
+    padding: 25px 45px 23px 45px;
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    position: absolute;
+    top: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pop-up__title {
+    margin-bottom: 30px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 3.8rem;
+    color: #0D606F;
+}
+
+.sign-button {
+    display: flex;
+    width: 100%;
+    height: 56px;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.6rem;
+
+    color: #FFFFFF;
+
+}
+
+.sign-button:first-child {
+    background: #1877F2;
+}
+
+.sign-button:last-child {
+    background: #fff;
+    color: #0D606F;
+    margin-top: 20px;
+}
+
+.fb-icon {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url("../assets/svg/fb.svg");
+    margin-right: 15px;
+}
+
+.google-icon {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background: url("../assets/svg/google.svg");
+    margin-right: 15px;
+}
+
+.hidden {
+    visibility: hidden;
 }

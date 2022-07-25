@@ -15,6 +15,21 @@
 </head>
 <body>
     <header class="header container">
+        <div class="pop-up hidden">
+            <div class="pop-up__content">
+                <div class="pop-up__title">Log in to your account</div>
+                <div class="sign-with-social-buttons">
+                    <button class="sign-button">
+                        <span class="fb-icon"></span>
+                        Sign In with Facebook
+                    </button>
+                    <button class="sign-button">
+                        <span class="google-icon"></span>
+                        Sign In with Google
+                    </button>
+                </div>
+            </div>
+        </div>
         <div class="header-wrapper">
             <div class="header-container">
                 <a href="#" class="logo">
@@ -36,11 +51,22 @@
                 <div class="header__button">
                     <button class="button header-button">Login</button>
                 </div>
-                <a href="#" class="burger-menu-button">
-                    <object class="burger-menu" type="image/svg+xml" data="./assets/svg/burger-menu.svg">
-                        Your browser does not support SVG
-                     </object>
-                </a>
+                <div class="burger-menu-button">
+                    <div class="burger-menu-button__middle"></div>
+                </div>
+                <div class="mobile-menu">
+                    <div class="mobile-menu-button">
+                        <span class="close"></span>
+                    </div>
+                    <ul class="mobile-menu-list">
+                        <li><a class="mobile-menu-link" href="#preview">How It Works</a></li>
+                        <li><a class="mobile-menu-link" href="#steps">Plan Your Trip</a></li>
+                        <li><a class="mobile-menu-link" href="#destinations">Destinations</a></li>
+                        <li><a class="mobile-menu-link" href="#stories">Travel Stories</a></li>
+                        <li><a class="mobile-menu-link" href="#">Account</a></li>
+                        <li><a class="mobile-menu-link" href="#footer">Social Media</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -176,7 +202,7 @@
                     </div>
             </section>
     </main>
-    <footer class="footer container">
+    <footer id="footer" class="footer container">
         <div class="footer-container">
             <ul class="rs-links">
                 <li><a href="https://rs.school/js/" target="_blank"><span class="rsschool-link"></span></a></li>
