@@ -7,7 +7,13 @@ const mobileLinks = document.querySelectorAll('.mobile-menu-link');
 const slider = document.querySelector('.slider');
 const paginationButtons = document.querySelectorAll('.pagination__item');
 const loginButton = document.querySelector('.header-button');
+const body = document.querySelector('body');
 const popup = document.querySelector('.pop-up');
+const popupContent = document.querySelector('.pop-up__content');
+const signIn = document.querySelectorAll('.sign-in');
+const signUp = document.querySelectorAll('.sign-up');
+const popupToggle = document.querySelector('.pop-up-toggle');
+const popupForm = document.querySelector('.pop-up__form')
 
 burgerButton.addEventListener('click', () => {
     mobileMenu.style.transform = 'translateX(-175px)'
@@ -56,9 +62,38 @@ paginationButtons.forEach((btn, index) => {
 })
 
 loginButton.addEventListener('click', () => {
-    popup.classList.remove('hidden')
+    popup.classList.remove('hidden');
+    popupContent.classList.add('show');
+    body.classList.add('stopscroll')
+
 })
 
 popup.addEventListener('click', (event) => {
-    if (event.target.classList.contains('pop-up')) popup.classList.add('hidden')
+    if (event.target.classList.contains('pop-up')) {
+        popup.classList.add('hidden')
+        popupContent.classList.remove('show')
+        body.classList.remove('stopscroll')
+        signIn.forEach((elem) => {
+            elem.classList.remove('hidden')
+        })
+        signUp.forEach((elem) => {
+            elem.classList.add('hidden')
+        })
+    }
 })
+
+popupToggle.addEventListener('click', () => {
+    signIn.forEach((elem) => {
+        elem.classList.toggle('hidden')
+    })
+    signUp.forEach((elem) => {
+        elem.classList.toggle('hidden')
+    })
+})
+
+popupForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    alert(`e-mail: ${popupForm.mail.value}
+  password: ${popupForm.password.value}`)
+    popupForm.reset()
+  })
