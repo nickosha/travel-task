@@ -613,12 +613,15 @@ h3 {
     height: 100vh;
     position: absolute;
     background-color: rgba(20, 20, 20 , 0.3);
+    top: 0;
+    left: 0;
+    z-index: 9998;
 }
 
 .pop-up__content {
     z-index: 9999;
     max-width: 650px;
-    width: 650px;
+    width: 90%;
     max-height: 660px;
     padding: 25px 45px 23px 45px;
     background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
