@@ -15,6 +15,39 @@
 </head>
 <body>
     <header class="header container">
+        <!-- <div class="pop-up hidden">
+        </div>
+        <div class="pop-up__content">
+            <div class="pop-up__title">
+                <span class="sign-in">Log in to your account</span>
+                <span class="sign-up hidden">Create account</span>
+            </div>
+            <div class="sign-with-social-buttons sign-in">
+                <button class="sign-button">
+                    <span class="fb-icon"></span>
+                    Sign In with Facebook
+                </button>
+                <button class="sign-button">
+                    <span class="google-icon"></span>
+                    Sign In with Google
+                </button>
+                <p class="pop-up__end">or</p>
+            </div>
+            <form action="#" class="pop-up__form">
+                <label for="pop-up__input-e-mail">E-mail</label>
+                <input type="text" name="mail" id="pop-up__input-e-mail" />
+                <label for="pop-up__input-password">Password</label>
+                <input type="text" name="password" id="pop-up__input-password" />
+                <button
+                        class="sign-button submit-button"
+                        type="submit"
+                        value="submit"
+                      ><span class="sign-in">Sign In</span><span class="sign-up hidden">Sign Up</span></button>
+              </form>
+              <a href="#" class="pop-up__forgot-password sign-in">Forgot Your Password?</a>
+              <p class="pop-up__account"><span class="sign-in">Don`t have an account?</span><span class="sign-up hidden">Already have an account?</span> <a href="#" class="pop-up-toggle"><span class="sign-in">Register</span><span class="sign-up hidden">Log in</span></a></p>
+        </div> -->
+      
         <div class="header-wrapper">
             <div class="header-container">
                 <a href="#" class="logo">
@@ -34,13 +67,24 @@
                     </ul>
                 </nav>
                 <div class="header__button">
-                    <button class="button header-button">Login</button>
+                    <button class="button header-button login-btn">Login</button>
                 </div>
-                <a href="#" class="burger-menu-button">
-                    <object class="burger-menu" type="image/svg+xml" data="./assets/svg/burger-menu.svg">
-                        Your browser does not support SVG
-                     </object>
-                </a>
+                <div class="burger-menu-button">
+                    <div class="burger-menu-button__middle"></div>
+                </div>
+                <div class="mobile-menu">
+                    <div class="mobile-menu-button">
+                        <span class="close"></span>
+                    </div>
+                    <ul class="mobile-menu-list">
+                        <li><a class="mobile-menu-link" href="#preview">How It Works</a></li>
+                        <li><a class="mobile-menu-link" href="#steps">Plan Your Trip</a></li>
+                        <li><a class="mobile-menu-link" href="#destinations">Destinations</a></li>
+                        <li><a class="mobile-menu-link" href="#stories">Travel Stories</a></li>
+                        <li><a class="mobile-menu-link login-btn" href="#">Account</a></li>
+                        <li><a class="mobile-menu-link" href="#footer">Social Media</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </header>
@@ -176,7 +220,7 @@
                     </div>
             </section>
     </main>
-    <footer class="footer container">
+    <footer id="footer" class="footer container">
         <div class="footer-container">
             <ul class="rs-links">
                 <li><a href="https://rs.school/js/" target="_blank"><span class="rsschool-link"></span></a></li>
@@ -189,6 +233,38 @@
                 <li><a href="https://twitter.com/" target="_blank"><span class="social-link twitter"></span></a></li>
             </ul>
         </div>
+        <div class="pop-up hidden">
+        </div>
+        <div class="pop-up__content">
+            <div class="pop-up__title">
+                <span class="sign-in">Log in to your account</span>
+                <span class="sign-up hidden">Create account</span>
+            </div>
+            <div class="sign-with-social-buttons sign-in">
+                <button class="sign-button">
+                    <span class="fb-icon"></span>
+                    Sign In with Facebook
+                </button>
+                <button class="sign-button">
+                    <span class="google-icon"></span>
+                    Sign In with Google
+                </button>
+                <p class="pop-up__end">or</p>
+            </div>
+            <form action="#" class="pop-up__form">
+                <label for="pop-up__input-e-mail">E-mail</label>
+                <input type="text" name="mail" id="pop-up__input-e-mail" />
+                <label for="pop-up__input-password">Password</label>
+                <input type="text" name="password" id="pop-up__input-password" />
+                <button
+                        class="sign-button submit-button"
+                        type="submit"
+                        value="submit"
+                      ><span class="sign-in">Sign In</span><span class="sign-up hidden">Sign Up</span></button>
+              </form>
+              <a href="#" class="pop-up__forgot-password sign-in">Forgot Your Password?</a>
+              <p class="pop-up__account"><span class="sign-in">Don`t have an account?</span><span class="sign-up hidden">Already have an account?</span> <a href="#" class="pop-up-toggle"><span class="sign-in">Register</span><span class="sign-up hidden">Log in</span></a></p>
+        </div>        
     </footer>
     <script src="./js/index.js"></script>
 </body>
